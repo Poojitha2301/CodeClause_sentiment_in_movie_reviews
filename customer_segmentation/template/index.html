@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segmentation</title>
+</head>
+<body>
+    <h1>Customer Segmentation</h1>
+    <form method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+        <br><br>
+        <label for="spending_score">Spending Score:</label>
+        <input type="text" id="spending_score" name="spending_score" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if cluster is not none %}
+        <h2>Cluster: {{ cluster }}</h2>
+    {% endif %}
+</body>
+</html>
